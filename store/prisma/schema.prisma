@@ -12,6 +12,7 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model Category {
   id                  String            @id @default(uuid())
   name                String
@@ -31,4 +32,4 @@ model Product {
   hasDiscount Boolean @default(false)
   discountPercentage Int @default(0)
 
-} 
+}
